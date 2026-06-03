@@ -1,0 +1,51 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Dashboard</title>
+
+<link rel="stylesheet"
+      href="{% static 'css/style.css' %}">
+
+</head>
+
+<body>
+
+<div class="overlay">
+
+<div class="container">
+
+<h1>📊 Airline Analytics Dashboard</h1>
+
+<div class="card">
+Total Flights :
+{{ total_flights }}
+</div>
+
+<div class="card">
+Total Passengers :
+{{ total_passengers }}
+</div>
+
+<div class="card">
+Total Bookings :
+{{ total_bookings }}
+</div>
+
+<div class="card">
+Total Revenue :
+₹{{ total_revenue }}
+</div>
+
+<br>
+
+<a href="/">🏠 Home</a>
+
+</div>
+
+</div>
+
+</body>
+</html>

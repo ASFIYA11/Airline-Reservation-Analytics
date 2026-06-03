@@ -1,0 +1,64 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+<img src="{% static 'images/logo.png' %}"
+     width="120">
+<title>Airline Reservation System</title>
+
+<link rel="stylesheet"
+      href="{% static 'css/style.css' %}">
+
+</head>
+
+<body>
+
+<div class="overlay">
+
+<div class="container">
+
+<h1>✈ Airline Reservation & Analytics System</h1>
+
+<hr><br>
+
+<ul>
+
+<li>
+<a href="/passenger/">
+👤 Add Passenger
+</a>
+</li>
+
+<li>
+<a href="/booking/">
+🎫 Add Booking
+</a>
+</li>
+
+<li>
+<a href="/flights/">
+🛫 View Flights
+</a>
+</li>
+
+<li>
+<a href="/dashboard/">
+📊 Dashboard
+</a>
+</li>
+
+<li>
+<a href="/analytics/">
+💰 Revenue Analytics
+</a>
+</li>
+
+</ul>
+
+</div>
+
+</div>
+
+</body>
+</html>

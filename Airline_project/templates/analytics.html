@@ -1,0 +1,52 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Revenue Analytics</title>
+
+<link rel="stylesheet"
+      href="{% static 'css/style.css' %}">
+
+</head>
+
+<body>
+
+<div class="overlay">
+
+<div class="container">
+
+<h1>💰 Revenue Analytics</h1>
+
+<table>
+
+<tr>
+<th>Flight Number</th>
+<th>Total Revenue</th>
+</tr>
+
+{% for row in revenue_data %}
+
+<tr>
+
+<td>{{ row.flight_number }}</td>
+
+<td>₹{{ row.revenue }}</td>
+
+</tr>
+
+{% endfor %}
+
+</table>
+
+<br>
+
+<a href="/">🏠 Home</a>
+
+</div>
+
+</div>
+
+</body>
+</html>

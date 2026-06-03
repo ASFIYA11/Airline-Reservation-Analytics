@@ -1,0 +1,61 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Flights</title>
+
+<link rel="stylesheet"
+      href="{% static 'css/style.css' %}">
+
+</head>
+
+<body>
+
+<div class="overlay">
+
+<div class="container">
+
+<h1>🛫 Available Flights</h1>
+
+<table>
+
+<tr>
+<th>ID</th>
+<th>Flight Number</th>
+<th>Source</th>
+<th>Destination</th>
+<th>Price</th>
+</tr>
+
+{% for flight in flights %}
+
+<tr>
+
+<td>{{ flight.flight_id }}</td>
+
+<td>{{ flight.flight_number }}</td>
+
+<td>{{ flight.source_city }}</td>
+
+<td>{{ flight.destination_city }}</td>
+
+<td>₹{{ flight.ticket_price }}</td>
+
+</tr>
+
+{% endfor %}
+
+</table>
+
+<br>
+
+<a href="/">🏠 Home</a>
+
+</div>
+
+</div>
+
+</body>
+</html>
