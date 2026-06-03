@@ -176,13 +176,6 @@ Through this project, the following SQL concepts were practiced:
 
 ---
 
-# Conclusion
-
-The Airline Reservation & Analytics System successfully demonstrates the use of SQL for managing airline operations and generating business insights. The project provides a strong foundation in relational database design, data analysis, and SQL querying techniques. The project also showcases practical use of joins, aggregate functions, subqueries, ranking functions, and stored procedures in a real-world airline management scenario.
-
-
-# ✈️ Airline Reservation & Analytics System
-
 A full-stack Airline Reservation and Analytics Web Application built using Django and MySQL.
 
 The project demonstrates airline booking operations, passenger management, flight management, and analytical reporting using SQL concepts such as joins, aggregations, subqueries, window functions, and stored procedures.
@@ -421,6 +414,10 @@ Add screenshots here:
 * Charts and Visualizations
 
 ---
+# Conclusion
+
+The Airline Reservation & Analytics System successfully demonstrates the use of SQL for managing airline operations and generating business insights. The project provides a strong foundation in relational database design, data analysis, and SQL querying techniques. The project also showcases practical use of joins, aggregate functions, subqueries, ranking functions, and stored procedures in a real-world airline management scenario.
+
 
 ## 👩‍💻 Author
 
