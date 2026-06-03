@@ -179,3 +179,253 @@ Through this project, the following SQL concepts were practiced:
 # Conclusion
 
 The Airline Reservation & Analytics System successfully demonstrates the use of SQL for managing airline operations and generating business insights. The project provides a strong foundation in relational database design, data analysis, and SQL querying techniques. The project also showcases practical use of joins, aggregate functions, subqueries, ranking functions, and stored procedures in a real-world airline management scenario.
+
+
+# ✈️ Airline Reservation & Analytics System
+
+A full-stack Airline Reservation and Analytics Web Application built using Django and MySQL.
+
+The project demonstrates airline booking operations, passenger management, flight management, and analytical reporting using SQL concepts such as joins, aggregations, subqueries, window functions, and stored procedures.
+
+---
+
+## 🚀 Features
+
+### Reservation System
+
+* Add Passengers
+* Create Flight Bookings
+* View Available Flights
+* Store booking information in MySQL
+
+### Analytics Dashboard
+
+* Total Flights
+* Total Passengers
+* Total Bookings
+* Total Revenue
+
+### Revenue Analytics
+
+* Revenue generated per flight
+* Flight performance comparison
+
+### SQL Concepts Demonstrated
+
+* INNER JOIN
+* LEFT JOIN
+* GROUP BY
+* Aggregate Functions
+* Subqueries
+* RANK()
+* DENSE_RANK()
+* Stored Procedures
+
+---
+
+## 🛠️ Tech Stack
+
+### Frontend
+
+* HTML5
+* CSS3
+
+### Backend
+
+* Django
+
+### Database
+
+* MySQL
+
+### Tools
+
+* VS Code
+* MySQL Workbench
+* GitHub
+
+---
+
+## 📂 Project Structure
+
+Airline_project/
+
+├── airline/
+
+│   ├── models.py
+
+│   ├── views.py
+
+│   └── urls.py
+
+│
+
+├── templates/
+
+│   ├── home.html
+
+│   ├── add_passenger.html
+
+│   ├── add_booking.html
+
+│   ├── flights.html
+
+│   ├── dashboard.html
+
+│   └── analytics.html
+
+│
+
+├── static/
+
+│   ├── css/
+
+│   │   └── style.css
+
+│   └── images/
+
+│
+
+├── manage.py
+
+├── requirements.txt
+
+└── README.md
+
+---
+
+## 🗄️ Database Schema
+
+### Flights
+
+* flight_id
+* flight_number
+* source_city
+* destination_city
+* departure_time
+* arrival_time
+* total_seats
+* ticket_price
+
+### Passengers
+
+* passenger_id
+* first_name
+* last_name
+* email
+* phone
+
+### Bookings
+
+* booking_id
+* flight_id
+* passenger_id
+* seat_number
+* booking_date
+* fare_paid
+
+### Crew
+
+* crew_id
+* crew_name
+* role
+
+### Crew Assignments
+
+* assignment_id
+* crew_id
+* flight_id
+
+---
+
+## 📊 Sample Analytics Queries
+
+### Revenue by Flight
+
+```sql
+SELECT
+    f.flight_number,
+    SUM(b.fare_paid) AS revenue
+FROM Flights f
+JOIN Bookings b
+ON f.flight_id = b.flight_id
+GROUP BY f.flight_number
+ORDER BY revenue DESC;
+```
+
+### Flight Revenue Ranking
+
+```sql
+SELECT
+    f.flight_number,
+    SUM(b.fare_paid) AS revenue,
+    RANK() OVER(
+        ORDER BY SUM(b.fare_paid) DESC
+    ) AS revenue_rank
+FROM Flights f
+JOIN Bookings b
+ON f.flight_id = b.flight_id
+GROUP BY f.flight_number;
+```
+
+### Dense Ranking
+
+```sql
+SELECT
+    f.flight_number,
+    SUM(b.fare_paid) AS revenue,
+    DENSE_RANK() OVER(
+        ORDER BY SUM(b.fare_paid) DESC
+    ) AS revenue_rank
+FROM Flights f
+JOIN Bookings b
+ON f.flight_id = b.flight_id
+GROUP BY f.flight_number;
+```
+
+---
+
+## 🎯 Learning Outcomes
+
+* Relational Database Design
+* MySQL Query Development
+* Django Backend Development
+* CRUD Operations
+* SQL Analytics
+* Window Functions
+* Stored Procedures
+* Web Application Development
+
+---
+
+## 📸 Screenshots
+
+Add screenshots here:
+
+* Home Page
+* Add Passenger
+* Add Booking
+* Flights Page
+* Dashboard
+* Revenue Analytics
+
+---
+
+## 🔮 Future Enhancements
+
+* Seat Availability Tracking
+* Crew Scheduling Dashboard
+* Flight Search Functionality
+* User Authentication
+* Online Ticket Generation
+* Charts and Visualizations
+
+---
+
+## 👩‍💻 Author
+
+Asfiya
+
+GitHub:
+https://github.com/ASFIYA11
+
